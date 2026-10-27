@@ -1,0 +1,1073 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYF ElectroLab | Laboratorio de Ley de Ohm</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+<header class="encabezado">
+  <div class="institucion">
+    <img src="img/escudo-unach.png" alt="Escudo de la UNACH">
+    <div>
+      <strong>UNIVERSIDAD NACIONAL<br>DE CHIMBORAZO</strong>
+      <small>Riobamba - Ecuador</small>
+    </div>
+  </div>
+
+  <div class="marca">
+    <h1>MYF <span>ELECTROLAB</span></h1>
+    <div class="onda">━━━━╱╲╱╲━━━━</div>
+    <h2>LEY DE OHM</h2>
+    <p>Experimenta · Aprende · Corrige · Mejora</p>
+  </div>
+
+  <div class="logo-carrera">
+    <img src="img/logo-derecha.png" alt="Logo de la carrera">
+  </div>
+</header>
+
+<div class="aplicacion">
+
+  <!-- MENÚ LATERAL -->
+  <nav class="lateral">
+    <h3>MENÚ PRINCIPAL</h3>
+    <a href="#inicio">⌂ Inicio</a>
+    <a href="#fundamentacion">📖 Fundamentación interactiva</a>
+    <a href="#laboratorio">⚡ Laboratorio virtual</a>
+    <a href="#constructor">🔌 Construcción de circuitos</a>
+    <a href="#datos">📊 Tablas y gráficas</a>
+    <a href="#guia">📋 Guía experimental</a>
+    <p class="lema">MYF ElectroLab<br>
+      <small>El error también enseña</small>
+    </p>
+  </nav>
+
+  <main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="bienvenida">
+      <div>
+        <span class="etiqueta">SIMULADOR DIDÁCTICO INTERACTIVO</span>
+        <h2>Bienvenido a MYF ElectroLab</h2>
+        <p>
+          Aprende los fundamentos de la Ley de Ohm,
+          experimenta con circuitos eléctricos y
+          recibe retroalimentación sobre tus conexiones.
+        </p>
+      </div>
+      <a href="#fundamentacion" class="boton-acceso">
+        Comenzar a aprender →
+      </a>
+    </section>
+
+    <!-- ==================================================
+         FUNDAMENTACIÓN INTERACTIVA
+    =================================================== -->
+    <section id="fundamentacion" class="panel">
+
+      <div class="titulo-panel">
+        <div>
+          <span class="etiqueta">AULA DE APRENDIZAJE INTERACTIVO</span>
+          <h2>📖 Fundamentación de la Ley de Ohm</h2>
+          <p>
+            Seis lecciones para comprender la teoría
+            antes de experimentar con los instrumentos.
+          </p>
+        </div>
+      </div>
+
+      <div class="progreso">
+        <div class="progreso-texto">
+          <strong>Tu progreso de aprendizaje</strong>
+          <span id="textoProgreso">0 de 6 lecciones estudiadas</span>
+        </div>
+        <div class="barra-progreso">
+          <div id="rellenoProgreso"></div>
+        </div>
+      </div>
+
+      <!-- PESTAÑAS -->
+      <div class="pestanas">
+        <button class="pestana activa" data-leccion="0">
+          1. Conceptos
+        </button>
+        <button class="pestana" data-leccion="1">
+          2. Ley de Ohm
+        </button>
+        <button class="pestana" data-leccion="2">
+          3. Instrumentos
+        </button>
+        <button class="pestana" data-leccion="3">
+          4. Resistencias
+        </button>
+        <button class="pestana" data-leccion="4">
+          5. Relaciones
+        </button>
+        <button class="pestana" data-leccion="5">
+          6. Evaluación
+        </button>
+      </div>
+
+      <!-- LECCIÓN 1 -->
+      <article class="leccion activa" id="leccion0">
+        <div class="leccion-titulo">
+          <span class="etiqueta">LECCIÓN 1 DE 6</span>
+          <h3>Conceptos eléctricos fundamentales</h3>
+          <p>
+            ¿Qué son el voltaje, la corriente, la resistencia
+            y la potencia eléctrica?
+          </p>
+        </div>
+
+        <div class="tarjetas">
+          <div class="tarjeta">
+            <div class="simbolo">V</div>
+            <h4>Voltaje</h4>
+            <p>
+              Diferencia de potencial eléctrico entre
+              dos puntos. Se expresa en voltios.
+            </p>
+            <small>V = energía por unidad de carga</small>
+          </div>
+
+          <div class="tarjeta">
+            <div class="simbolo">I</div>
+            <h4>Corriente</h4>
+            <p>
+              Cantidad de carga eléctrica que pasa
+              por una sección por unidad de tiempo.
+            </p>
+            <small>Unidad: amperio (A)</small>
+          </div>
+
+          <div class="tarjeta">
+            <div class="simbolo">R</div>
+            <h4>Resistencia</h4>
+            <p>
+              Magnitud que relaciona el voltaje con
+              la corriente en un resistor óhmico.
+            </p>
+            <small>Unidad: ohmio (Ω)</small>
+          </div>
+
+          <div class="tarjeta">
+            <div class="simbolo">P</div>
+            <h4>Potencia</h4>
+            <p>
+              Rapidez con que se transfiere o transforma
+              energía eléctrica.
+            </p>
+            <small>P = V × I, unidad: vatio (W)</small>
+          </div>
+        </div>
+
+        <div class="ejemplo">
+          <h4>🔎 Ejemplo cotidiano</h4>
+          <p>
+            Si un dispositivo recibe 12 V y circula una
+            corriente de 0,5 A, su potencia eléctrica es:
+          </p>
+          <div class="formula">P = 12 × 0,5 = 6 W</div>
+        </div>
+
+        <div class="mini-pregunta">
+          <h4>Comprueba lo aprendido</h4>
+          <p>
+            Si la resistencia permanece constante
+            y duplicamos el voltaje, ¿qué sucede
+            con la corriente?
+          </p>
+          <div class="opciones">
+            <button data-pregunta-corta="1" data-correcta="no">
+              Se reduce a la mitad
+            </button>
+            <button data-pregunta-corta="1" data-correcta="si">
+              Se duplica
+            </button>
+            <button data-pregunta-corta="1" data-correcta="no">
+              Permanece igual
+            </button>
+          </div>
+          <p id="respuestaCorta1" class="retro"></p>
+        </div>
+      </article>
+
+      <!-- LECCIÓN 2 -->
+      <article class="leccion" id="leccion1" hidden>
+        <div class="leccion-titulo">
+          <span class="etiqueta">LECCIÓN 2 DE 6</span>
+          <h3>Triángulo de Ohm interactivo</h3>
+          <p>
+            Selecciona qué magnitud quieres calcular
+            y observa el procedimiento.
+          </p>
+        </div>
+
+        <div class="dos-columnas">
+          <div class="herramienta">
+            <h4>Triángulo de Ohm</h4>
+
+            <svg viewBox="0 0 320 275"
+                 class="triangulo-svg"
+                 role="img"
+                 aria-label="Triángulo de Ohm con V arriba e I y R abajo">
+              <path d="M160 22 L295 250 H25 Z"
+                    fill="#16466b"
+                    stroke="#38bdf8"
+                    stroke-width="4"/>
+              <path d="M92 137 H228"
+                    stroke="white" stroke-width="4"/>
+              <path d="M160 137 V232"
+                    stroke="white" stroke-width="4"/>
+
+              <text x="160" y="108" text-anchor="middle"
+                    font-size="53" fill="white">V</text>
+              <text x="112" y="207" text-anchor="middle"
+                    font-size="47" fill="white">I</text>
+              <text x="208" y="207" text-anchor="middle"
+                    font-size="47" fill="white">R</text>
+            </svg>
+
+            <p class="nota">
+              V = I × R · I = V / R · R = V / I
+            </p>
+          </div>
+
+          <div class="herramienta">
+            <h4>Calculadora explicativa</h4>
+
+            <div class="selector-formula">
+              <button class="seleccionado"
+                      data-calculo="I">Calcular I</button>
+              <button data-calculo="V">Calcular V</button>
+              <button data-calculo="R">Calcular R</button>
+            </div>
+
+            <div id="formulaSeleccionada"
+                 class="formula-grande">
+              I = V / R
+            </div>
+
+            <div class="dos-entradas">
+              <label>
+                <span id="etiquetaDato1">Voltaje (V)</span>
+                <input id="dato1" type="number"
+                       value="12" min="0" step="any">
+              </label>
+              <label>
+                <span id="etiquetaDato2">Resistencia (Ω)</span>
+                <input id="dato2" type="number"
+                       value="300" min="0" step="any">
+              </label>
+            </div>
+
+            <div id="resultadoCalculadora"
+                 class="resultado">
+              I = 0,040 A = 40,00 mA
+            </div>
+
+            <div id="pasosCalculadora"
+                 class="explicacion">
+              Identificamos los datos y aplicamos I = V/R.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- LECCIÓN 3 -->
+      <article class="leccion" id="leccion2" hidden>
+        <div class="leccion-titulo">
+          <span class="etiqueta">LECCIÓN 3 DE 6</span>
+          <h3>Instrumentos eléctricos de medición</h3>
+          <p>
+            Aprende dónde se conecta cada equipo
+            y por qué una conexión incorrecta
+            puede alterar o dañar el circuito.
+          </p>
+        </div>
+
+        <div class="tarjetas">
+          <div class="tarjeta">
+            <div class="simbolo">DC</div>
+            <h4>Fuente DC</h4>
+            <p>
+              Mantiene una diferencia de potencial
+              entre sus terminales.
+            </p>
+          </div>
+
+          <div class="tarjeta">
+            <div class="simbolo">A</div>
+            <h4>Amperímetro</h4>
+            <p>
+              Mide corriente. Se conecta en serie
+              con el tramo del circuito.
+            </p>
+          </div>
+
+          <div class="tarjeta">
+            <div class="simbolo">V</div>
+            <h4>Voltímetro</h4>
+            <p>
+              Mide diferencia de potencial.
+              Se conecta en paralelo.
+            </p>
+          </div>
+        </div>
+
+        <div class="herramienta">
+          <h4>Esquema de conexión correcta</h4>
+
+          <svg viewBox="0 0 680 265"
+               class="esquema"
+               role="img"
+               aria-label="Amperímetro en serie y voltímetro en paralelo">
+            <g fill="none" stroke="#38bdf8"
+               stroke-width="5" stroke-linecap="round">
+              <path d="M90 95 V45 H230"/>
+              <path d="M290 45 H395"/>
+              <path d="M505 45 H595 V223 H90 V155"/>
+              <path d="M375 45 V138 H410"/>
+              <path d="M470 138 H525 V45"/>
+            </g>
+
+            <line x1="65" y1="95" x2="115" y2="95"
+                  stroke="#facc15" stroke-width="5"/>
+            <line x1="76" y1="155" x2="104" y2="155"
+                  stroke="#facc15" stroke-width="5"/>
+
+            <circle cx="260" cy="45" r="30"
+                    fill="#102a42" stroke="#4ade80"
+                    stroke-width="4"/>
+            <text x="260" y="55"
+                  text-anchor="middle"
+                  font-size="30" fill="white">A</text>
+
+            <rect x="395" y="27" width="110" height="36"
+                  rx="8" fill="#e7bd83"/>
+            <text x="450" y="52"
+                  text-anchor="middle"
+                  fill="#38230d" font-size="22">R</text>
+
+            <circle cx="440" cy="138" r="30"
+                    fill="#102a42" stroke="#60a5fa"
+                    stroke-width="4"/>
+            <text x="440" y="149"
+                  text-anchor="middle"
+                  font-size="30" fill="white">V</text>
+
+            <text x="260" y="97" text-anchor="middle"
+                  fill="white" font-size="16">En serie</text>
+            <text x="440" y="190" text-anchor="middle"
+                  fill="white" font-size="16">En paralelo</text>
+            <text x="90" y="254" text-anchor="middle"
+                  fill="white" font-size="16">Fuente</text>
+          </svg>
+        </div>
+
+        <div class="mini-pregunta">
+          <h4>Pregunta de seguridad</h4>
+          <p>
+            ¿Qué sucede si conectamos un amperímetro ideal
+            directamente en paralelo con una fuente?
+          </p>
+          <div class="opciones">
+            <button data-pregunta-corta="2" data-correcta="no">
+              La resistencia aumenta
+            </button>
+            <button data-pregunta-corta="2" data-correcta="si">
+              Puede producirse un cortocircuito
+            </button>
+          </div>
+          <p id="respuestaCorta2" class="retro"></p>
+        </div>
+      </article>
+
+      <!-- LECCIÓN 4 -->
+      <article class="leccion" id="leccion3" hidden>
+        <div class="leccion-titulo">
+          <span class="etiqueta">LECCIÓN 4 DE 6</span>
+          <h3>Código de colores de resistencias</h3>
+          <p>
+            Aprende a interpretar las cuatro bandas
+            de una resistencia física.
+          </p>
+        </div>
+
+        <div class="dos-columnas">
+
+          <div class="herramienta">
+            <h4>Resistencia de cuatro bandas</h4>
+
+            <svg viewBox="0 0 420 170"
+                 class="resistencia-grande"
+                 role="img"
+                 aria-label="Resistencia con bandas de colores">
+              <line x1="10" y1="85"
+                    x2="410" y2="85"
+                    stroke="#c5d2dd" stroke-width="8"/>
+
+              <rect x="86" y="50" width="248" height="70"
+                    rx="28" fill="#e6bd8b"
+                    stroke="#a57240" stroke-width="4"/>
+
+              <rect id="colorBanda1"
+                    x="130" y="52" width="16" height="66"/>
+              <rect id="colorBanda2"
+                    x="182" y="52" width="16" height="66"/>
+              <rect id="colorBanda3"
+                    x="234" y="52" width="16" height="66"/>
+              <rect id="colorBanda4"
+                    x="294" y="52" width="14" height="66"/>
+            </svg>
+
+            <div id="resultadoResistencia"
+                 class="resultado">300 Ω ±5 %</div>
+            <p id="intervaloResistencia" class="nota">
+              Intervalo: 285 Ω a 315 Ω
+            </p>
+          </div>
+
+          <div class="herramienta">
+            <h4>Selecciona las bandas</h4>
+
+            <div class="selectores-resistencia">
+              <label>
+                Primera cifra
+                <select id="bandaSelect1">
+                  <option value="1">Marrón (1)</option>
+                  <option value="2">Rojo (2)</option>
+                  <option value="3" selected>Naranja (3)</option>
+                  <option value="4">Amarillo (4)</option>
+                  <option value="5">Verde (5)</option>
+                  <option value="6">Azul (6)</option>
+                  <option value="7">Violeta (7)</option>
+                  <option value="8">Gris (8)</option>
+                  <option value="9">Blanco (9)</option>
+                </select>
+              </label>
+
+              <label>
+                Segunda cifra
+                <select id="bandaSelect2">
+                  <option value="0" selected>Negro (0)</option>
+                  <option value="1">Marrón (1)</option>
+                  <option value="2">Rojo (2)</option>
+                  <option value="3">Naranja (3)</option>
+                  <option value="4">Amarillo (4)</option>
+                  <option value="5">Verde (5)</option>
+                  <option value="6">Azul (6)</option>
+                  <option value="7">Violeta (7)</option>
+                  <option value="8">Gris (8)</option>
+                  <option value="9">Blanco (9)</option>
+                </select>
+              </label>
+
+              <label>
+                Multiplicador
+                <select id="bandaSelect3">
+                  <option value="-2">Plateado (×0,01)</option>
+                  <option value="-1">Dorado (×0,1)</option>
+                  <option value="0">Negro (×1)</option>
+                  <option value="1" selected>Marrón (×10)</option>
+                  <option value="2">Rojo (×100)</option>
+                  <option value="3">Naranja (×1000)</option>
+                  <option value="4">Amarillo (×10000)</option>
+                  <option value="5">Verde (×100000)</option>
+                  <option value="6">Azul (×1000000)</option>
+                </select>
+              </label>
+
+              <label>
+                Tolerancia
+                <select id="bandaSelect4">
+                  <option value="1">Marrón (±1 %)</option>
+                  <option value="2">Rojo (±2 %)</option>
+                  <option value="5" selected>Dorado (±5 %)</option>
+                  <option value="10">Plateado (±10 %)</option>
+                </select>
+              </label>
+            </div>
+
+            <div id="explicacionBandas" class="explicacion">
+              Las dos primeras bandas representan 30;
+              el multiplicador es ×10 y la tolerancia ±5 %.
+            </div>
+          </div>
+        </div>
+
+        <p class="nota-academica">
+          En una resistencia real, las bandas no cambian
+          al modificar su valor. En el simulador se representa
+          el reemplazo virtual de una resistencia por otra.
+        </p>
+      </article>
+
+      <!-- LECCIÓN 5 -->
+      <article class="leccion" id="leccion4" hidden>
+        <div class="leccion-titulo">
+          <span class="etiqueta">LECCIÓN 5 DE 6</span>
+          <h3>Relaciones entre las magnitudes eléctricas</h3>
+          <p>
+            Observa cómo cambia la corriente cuando
+            varía una magnitud y mantenemos constante otra.
+          </p>
+        </div>
+
+        <div class="selector-formula">
+          <button class="seleccionado"
+                  data-tipo-grafica="voltaje">
+            Variar V con R constante
+          </button>
+          <button data-tipo-grafica="resistencia">
+            Variar R con V constante
+          </button>
+        </div>
+
+        <div class="dos-columnas">
+          <div class="herramienta">
+            <label class="control">
+              <span id="textoFijo">Resistencia fija</span>
+              <input id="valorFijo" type="range"
+                     min="100" max="1000"
+                     step="100" value="300">
+              <strong id="textoValorFijo">300 Ω</strong>
+            </label>
+
+            <div id="explicacionRelacion"
+                 class="explicacion">
+              Si la resistencia permanece constante,
+              la corriente es directamente proporcional
+              al voltaje.
+            </div>
+
+            <div id="ejemploRelacion"
+                 class="resultado">
+              12 V / 300 Ω = 40 mA
+            </div>
+          </div>
+
+          <div class="herramienta">
+            <h4>Gráfica dinámica</h4>
+            <svg id="graficaTeorica"
+                 viewBox="0 0 640 360"
+                 class="grafica-teorica"
+                 role="img"
+                 aria-label="Gráfica de la Ley de Ohm">
+            </svg>
+            <p id="descripcionGrafica" class="nota"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- LECCIÓN 6 -->
+      <article class="leccion" id="leccion5" hidden>
+        <div class="leccion-titulo">
+          <span class="etiqueta">LECCIÓN 6 DE 6</span>
+          <h3>Autoevaluación de la Ley de Ohm</h3>
+          <p>
+            Contesta seis preguntas. Al finalizar
+            recibirás tu calificación y una explicación
+            para cada respuesta.
+          </p>
+        </div>
+
+        <form id="cuestionario">
+
+          <fieldset class="pregunta"
+                    data-correcta="b"
+                    data-explicacion="La corriente se mide en amperios.">
+            <legend>1. ¿Qué magnitud se mide en amperios?</legend>
+            <label><input type="radio" name="p1" value="a"> Voltaje</label>
+            <label><input type="radio" name="p1" value="b"> Corriente</label>
+            <label><input type="radio" name="p1" value="c"> Resistencia</label>
+            <p class="comentario-pregunta"></p>
+          </fieldset>
+
+          <fieldset class="pregunta"
+                    data-correcta="c"
+                    data-explicacion="I = 12/300 = 0,04 A = 40 mA.">
+            <legend>2. ¿Cuál es la corriente para 12 V y 300 Ω?</legend>
+            <label><input type="radio" name="p2" value="a"> 4 mA</label>
+            <label><input type="radio" name="p2" value="b"> 25 mA</label>
+            <label><input type="radio" name="p2" value="c"> 40 mA</label>
+            <p class="comentario-pregunta"></p>
+          </fieldset>
+
+          <fieldset class="pregunta"
+                    data-correcta="a"
+                    data-explicacion="El amperímetro se conecta en serie.">
+            <legend>3. ¿Cómo se conecta el amperímetro?</legend>
+            <label><input type="radio" name="p3" value="a"> En serie</label>
+            <label><input type="radio" name="p3" value="b"> En paralelo</label>
+            <label><input type="radio" name="p3" value="c"> Directo a ambos polos</label>
+            <p class="comentario-pregunta"></p>
+          </fieldset>
+
+          <fieldset class="pregunta"
+                    data-correcta="b"
+                    data-explicacion="La banda dorada indica tolerancia ±5 %.">
+            <legend>4. ¿Qué significa una cuarta banda dorada?</legend>
+            <label><input type="radio" name="p4" value="a"> 10 Ω</label>
+            <label><input type="radio" name="p4" value="b"> Tolerancia ±5 %</label>
+            <label><input type="radio" name="p4" value="c"> Voltaje máximo</label>
+            <p class="comentario-pregunta"></p>
+          </fieldset>
+
+          <fieldset class="pregunta"
+                    data-correcta="c"
+                    data-explicacion="Con V constante, al duplicar R la corriente se reduce a la mitad.">
+            <legend>5. Si duplicamos R y mantenemos V, ¿qué pasa con I?</legend>
+            <label><input type="radio" name="p5" value="a"> Se duplica</label>
+            <label><input type="radio" name="p5" value="b"> No cambia</label>
+            <label><input type="radio" name="p5" value="c"> Se reduce a la mitad</label>
+            <p class="comentario-pregunta"></p>
+          </fieldset>
+
+          <fieldset class="pregunta"
+                    data-correcta="a"
+                    data-explicacion="P = V × I = 6 × 0,02 = 0,12 W.">
+            <legend>6. ¿Qué potencia tenemos con 6 V y 0,02 A?</legend>
+            <label><input type="radio" name="p6" value="a"> 0,12 W</label>
+            <label><input type="radio" name="p6" value="b"> 12 W</label>
+            <label><input type="radio" name="p6" value="c"> 300 W</label>
+            <p class="comentario-pregunta"></p>
+          </fieldset>
+
+          <div class="acciones">
+            <button type="submit" class="verde">
+              Corregir respuestas
+            </button>
+            <button type="button" id="reintentar" class="azul">
+              Intentar nuevamente
+            </button>
+          </div>
+
+          <div id="resultadoCuestionario"
+               class="resultado" role="status">
+            Responde las preguntas para conocer tu puntuación.
+          </div>
+        </form>
+      </article>
+
+      <!-- NAVEGACIÓN DEL CURSO -->
+      <div class="navegacion-curso">
+        <button id="anteriorLeccion" class="azul">
+          ← Anterior
+        </button>
+        <button id="completarLeccion" class="verde">
+          ✓ Marcar como estudiada
+        </button>
+        <button id="siguienteLeccion" class="azul">
+          Siguiente →
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         LABORATORIO VIRTUAL
+    =================================================== -->
+    <section id="laboratorio" class="panel">
+      <div class="titulo-panel">
+        <div>
+          <h2>⚡ Laboratorio experimental virtual</h2>
+          <p>
+            Fuente, resistencia, amperímetro y voltímetro digitales.
+          </p>
+        </div>
+        <span class="etiqueta">CIRCUITO DC IDEAL</span>
+      </div>
+
+      <div class="controles">
+        <div class="control">
+          <label for="voltaje">Voltaje de la fuente</label>
+          <input id="voltaje" type="range"
+                 min="0" max="24" step="0.5" value="6">
+          <strong id="valorVoltaje">6,0 V</strong>
+        </div>
+
+        <div class="control">
+          <label for="resistencia">Resistencia eléctrica</label>
+          <input id="resistencia" type="range"
+                 min="10" max="1000"
+                 step="10" value="300">
+          <strong id="valorResistencia">300 Ω</strong>
+        </div>
+      </div>
+
+      <div class="panel-sonido">
+        <div>
+          <strong>🔊 Sonido didáctico</strong>
+          <p>
+            El tono y la frecuencia de los pulsos aumentan
+            con la corriente eléctrica.
+          </p>
+        </div>
+
+        <div class="sonido-controles">
+          <button id="botonSonido" type="button">
+            🔊 Sonido activado
+          </button>
+          <label for="volumen">Volumen</label>
+          <input id="volumen" type="range"
+                 min="0" max="100" value="30">
+        </div>
+      </div>
+
+      <div class="mesa">
+        <h3>🔬 Banco de experimentación</h3>
+
+        <svg id="circuito"
+             viewBox="0 0 980 420"
+             role="img"
+             aria-label="Circuito con fuente, amperímetro en serie,
+             resistencia y voltímetro en paralelo">
+
+          <defs>
+            <pattern id="rejillaLab" width="25" height="25"
+                     patternUnits="userSpaceOnUse">
+              <path d="M25 0H0V25"
+                    stroke="#ffffff"
+                    stroke-opacity=".1"
+                    fill="none"/>
+            </pattern>
+          </defs>
+
+          <rect x="5" y="5" width="970" height="410"
+                rx="17" fill="#6c869c"/>
+          <rect x="5" y="5" width="970" height="410"
+                rx="17" fill="url(#rejillaLab)"/>
+
+          <g fill="none" stroke-width="7"
+             stroke-linejoin="round"
+             stroke-linecap="round">
+            <path d="M170 273 H270" stroke="#db3447"/>
+            <path d="M428 273 H465 V105 H570"
+                  stroke="#db3447"/>
+            <path d="M688 105 H927 V386 H75 V273"
+                  stroke="#172b40"/>
+            <path d="M535 105 V273 H720"
+                  stroke="#db3447"/>
+            <path d="M743 105 V273 H888"
+                  stroke="#172b40"/>
+          </g>
+
+          <g class="pulsos" fill="none"
+             stroke="#baff9c" stroke-width="3"
+             stroke-dasharray="7 24">
+            <path d="M170 273 H270"/>
+            <path d="M428 273 H465 V105 H570"/>
+            <path d="M688 105 H927 V386 H75 V273"/>
+          </g>
+
+          <!-- FUENTE -->
+          <g class="instrumento">
+            <rect x="25" y="183" width="185" height="165"
+                  rx="14" class="carcasa"/>
+            <text x="117" y="172"
+                  text-anchor="middle"
+                  class="nombre-instrumento">FUENTE DC</text>
+            <rect x="43" y="204"
+                  width="149" height="69"
+                  rx="8" class="pantalla-oscura"/>
+            <text x="117" y="248"
+                  text-anchor="middle"
+                  class="digitos"
+                  id="pantallaFuente">6.0 V</text>
+            <circle cx="75" cy="273" r="10"
+                    fill="#172538" stroke="#cbd5e1"
+                    stroke-width="3"/>
+            <circle cx="170" cy="273" r="10"
+                    fill="#dc3345" stroke="#ffc4c9"
+                    stroke-width="3"/>
+            <circle cx="185" cy="197" r="6"
+                    class="led"/>
+          </g>
+
+          <!-- AMPERÍMETRO -->
+          <g class="instrumento">
+            <rect x="245" y="183" width="210" height="165"
+                  rx="14" class="carcasa"/>
+            <text x="350" y="172"
+                  text-anchor="middle"
+                  class="nombre-instrumento">AMPERÍMETRO</text>
+            <rect x="265" y="204"
+                  width="170" height="69"
+                  rx="8" class="pantalla-oscura"/>
+            <text x="350" y="240"
+                  text-anchor="middle"
+                  class="digitos"
+                  id="pantallaAmperimetro">0.00</text>
+            <text x="350" y="261"
+                  text-anchor="middle"
+                  fill="#b6fff2">mA</text>
+            <circle cx="270" cy="273" r="10"
+                    fill="#dc3345" stroke="#ffc4c9"
+                    stroke-width="3"/>
+            <circle cx="428" cy="273" r="10"
+                    fill="#172538" stroke="#cbd5e1"
+                    stroke-width="3"/>
+            <circle cx="436" cy="197" r="6"
+                    class="led"/>
+          </g>
+
+          <!-- RESISTENCIA -->
+          <g>
+            <text id="etiquetaResistencia"
+                  x="628" y="75"
+                  text-anchor="middle"
+                  fill="white"
+                  font-size="20">R = 300 Ω</text>
+            <rect x="570" y="87" width="118" height="36"
+                  rx="14" fill="#e2b77e"/>
+            <rect id="labBanda1" x="587" y="89"
+                  width="9" height="32"/>
+            <rect id="labBanda2" x="613" y="89"
+                  width="9" height="32"/>
+            <rect id="labBanda3" x="638" y="89"
+                  width="9" height="32"/>
+            <rect id="labBanda4" x="667" y="89"
+                  width="8" height="32"/>
+          </g>
+
+          <!-- VOLTÍMETRO -->
+          <g class="instrumento">
+            <rect x="692" y="183" width="224" height="165"
+                  rx="14" class="carcasa"/>
+            <text x="804" y="172"
+                  text-anchor="middle"
+                  class="nombre-instrumento">VOLTÍMETRO</text>
+            <rect x="713" y="203"
+                  width="182" height="70"
+                  rx="8" class="pantalla-clara"/>
+            <text x="804" y="249"
+                  text-anchor="middle"
+                  class="digitos-oscuros"
+                  id="pantallaVoltimetro">0.00</text>
+            <circle cx="720" cy="273" r="10"
+                    fill="#dc3345" stroke="#ffc4c9"
+                    stroke-width="3"/>
+            <circle cx="888" cy="273" r="10"
+                    fill="#172538" stroke="#cbd5e1"
+                    stroke-width="3"/>
+            <circle cx="894" cy="197" r="6"
+                    class="led"/>
+          </g>
+
+          <rect x="337" y="365" width="306" height="33"
+                rx="16" fill="#0b263b"/>
+          <text id="estadoCircuito"
+                x="490" y="387"
+                text-anchor="middle"
+                font-size="14"
+                fill="white">
+            ○ SIMULACIÓN DETENIDA
+          </text>
+        </svg>
+      </div>
+
+      <div class="informacion-resistencia">
+        <div>
+          <strong>🎨 Bandas de la resistencia</strong>
+          <p id="coloresTexto">
+            Naranja · Negro · Marrón · Dorado
+          </p>
+          <small>Tolerancia nominal de ±5 %</small>
+        </div>
+        <div>
+          <small>Potencia calculada</small>
+          <strong id="valorPotencia">0,000 W</strong>
+        </div>
+      </div>
+
+      <div id="avisoPotencia"
+           class="aviso-potencia"></div>
+
+      <div class="lecturas">
+        <div>
+          <span>VOLTAJE</span>
+          <strong id="medidorVoltaje">0,00 V</strong>
+        </div>
+        <div>
+          <span>CORRIENTE</span>
+          <strong id="medidorCorriente">0,000000 A</strong>
+          <small id="medidorMilliamp">0,00 mA</small>
+        </div>
+        <div>
+          <span>RESISTENCIA</span>
+          <strong id="medidorResistencia">300 Ω</strong>
+        </div>
+      </div>
+
+      <div class="acciones">
+        <button id="iniciar" class="verde">▶ Iniciar</button>
+        <button id="pausar" class="naranja">⏸ Pausar</button>
+        <button id="reiniciar" class="rojo">↻ Reiniciar</button>
+      </div>
+
+      <p id="estadoSimulacion" class="estado">
+        Presiona Iniciar para comenzar.
+      </p>
+    </section>
+
+    <!-- ==================================================
+         CONSTRUCTOR DE CIRCUITOS
+    =================================================== -->
+    <section id="constructor" class="panel">
+      <div class="titulo-panel">
+        <div>
+          <h2>🔌 Construye tu propio circuito</h2>
+          <p>
+            Haz clic en un terminal y luego en otro
+            para crear un cable.
+          </p>
+        </div>
+        <span class="etiqueta">MÓDULO INTERACTIVO</span>
+      </div>
+
+      <div class="aviso">
+        <strong>Reto:</strong> conecta el amperímetro
+        en serie con la resistencia y el voltímetro
+        en paralelo. El programa analizará
+        las conexiones que realices.
+      </div>
+
+      <div class="mesa">
+        <svg id="tablero"
+             viewBox="0 0 1000 460"
+             role="group"
+             aria-label="Tablero interactivo de conexiones">
+        </svg>
+      </div>
+
+      <p id="estadoCable" class="estado">
+        Selecciona dos terminales para conectarlos.
+      </p>
+
+      <div class="acciones">
+        <button id="comprobarCircuito" class="verde">
+          ✓ Comprobar y encender
+        </button>
+        <button id="ejemploCorrecto" class="azul">
+          ⚡ Ejemplo correcto
+        </button>
+        <button id="ejemploPolaridad" class="naranja">
+          ↔ Error de polaridad
+        </button>
+        <button id="ejemploCortocircuito" class="naranja">
+          ⚠ Cortocircuito
+        </button>
+        <button id="quitarCables" class="rojo">
+          ✕ Quitar cables
+        </button>
+      </div>
+
+      <div id="retroalimentacion"
+           class="retroalimentacion" role="status">
+        Conecta los componentes y presiona
+        Comprobar para recibir retroalimentación.
+      </div>
+    </section>
+
+    <!-- DATOS -->
+    <section id="datos" class="panel">
+      <div class="titulo-panel">
+        <div>
+          <h2>📊 Datos y gráficas experimentales</h2>
+          <p>Registra mediciones de la simulación.</p>
+        </div>
+      </div>
+
+      <div class="acciones izquierda">
+        <button id="registrar" class="verde">
+          + Registrar medición
+        </button>
+        <button id="exportar" class="azul">
+          ↓ Exportar CSV
+        </button>
+        <button id="limpiarDatos" class="rojo">
+          Limpiar registros
+        </button>
+      </div>
+
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>N.º</th>
+              <th>Voltaje (V)</th>
+              <th>Resistencia (Ω)</th>
+              <th>Corriente (A)</th>
+              <th>Corriente (mA)</th>
+              <th>Potencia (W)</th>
+            </tr>
+          </thead>
+          <tbody id="tablaDatos">
+            <tr>
+              <td colspan="6">No hay mediciones.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Corriente por medición (mA)</h3>
+      <div id="graficaDatos" class="grafica-barras">
+        Registra datos para generar la gráfica.
+      </div>
+    </section>
+
+    <!-- GUÍA -->
+    <section id="guia" class="panel">
+      <div class="titulo-panel">
+        <div>
+          <h2>📋 Guía de laboratorio experimental</h2>
+          <p>Práctica: verificación de la Ley de Ohm.</p>
+        </div>
+      </div>
+
+      <h3>Objetivo</h3>
+      <p>
+        Analizar la relación entre voltaje,
+        corriente y resistencia eléctrica
+        mediante la experimentación virtual.
+      </p>
+
+      <h3>Procedimiento</h3>
+      <ol class="pasos">
+        <li>Estudia los conceptos y el triángulo de Ohm.</li>
+        <li>Selecciona 6 V y 300 Ω en el laboratorio.</li>
+        <li>Presiona Iniciar y observa los instrumentos.</li>
+        <li>Registra cinco mediciones variando el voltaje.</li>
+        <li>Compara cada corriente con I = V/R.</li>
+        <li>Abre el constructor de circuitos.</li>
+        <li>Conecta el amperímetro en serie.</li>
+        <li>Conecta el voltímetro en paralelo.</li>
+        <li>Comprueba el montaje y corrige los errores.</li>
+        <li>Resuelve la autoevaluación de Fundamentación.</li>
+      </ol>
+
+      <h3>Reflexión</h3>
+      <p>
+        ¿Por qué la corriente aumenta cuando sube
+        el voltaje y la resistencia permanece constante?
+        ¿Por qué el amperímetro debe conectarse en serie?
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  MYF ElectroLab · Simulador didáctico
+  de la Ley de Ohm · UNACH
+</footer>
+
+</body>
+</html>
